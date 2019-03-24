@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Lecture 2 COMP1950 </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/proto.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Navigation Bar-->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <a class="nav-link disabled" href="proto.html">COMP 1950</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="proto.html">Home</a></li>
+      <li class="nav-item active"><a class="nav-link" href="lecture.html">Lectures</a></li>
+      <li class="nav-item"><a class="nav-link" href="quiz.html">Quizzes</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Assignments</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Exams</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+   </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<br />
+<!-- Title -->
+<h2> COMP 1950 Web Development and Design </h2><br />
+
+<nav aria-label="breadcrumb" class="bg-white">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="lecture.html">Lectures</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Lecture 2: State, Components and Handlers</li>
+  </ol>
+</nav>
+
+<br />
+<h4> Lecture Outline </h4>
+  <ul>
+    <a href="#state"><li>React State</li></a>
+    <a href="#component"><li>Component Lifecycle</li></a>
+    <a href="#handlers"><li>Event Handlers</li></a>
+  </ul>
+<br /><hr><br />
+<h4 id="state"> React State </h4>
+  <b> What is state? </b>
+  <p> According to a dictionary entry, this is the definition of state: the particular condition that someone or something is in at a specific time. In Software Development, the term has pretty much the same meaning. </p>
+  <p> Here are some examples of state: </p>
+  <ul>
+    <li> When a user is inputting text into a text field. Each time the user types into the text field, the application is at a different state. </li>
+    <li> When a user clicks on a checkbox, and it toggles from unchecked/checked.</li>
+    <li> When you first load an application, and you see a loading spinner. Then moments later, you see a list of data that was not there before.</li>
+    <li> In a game, where you take damage from an enemy, and your health bar lowers.</li>
+    <li> In a calculator, when you input your 1st number, 2nd number and operator. </li>
+  </ul>
+  <p> If you think about it, software cannot exist without state. Otherwise they’d just be static content, that cannot be interacted with, such as books, movies and static websites. </p>
+  <b> How to use State in Components </b>
+  <p> In React, there are a few different ways that you can create Components. We’ve learned one of them, which will have you covered for all our cases. We will cover other ways of creating components at a future class. If you are using JavaScript’s class constructor to create components, here is how you can implement state. </p>
+
+<br /><hr><br />
+
+<h4 id="component"> Component Lifecycle </h4>
+  <b> Instructor’s Comments </b>
+  <p> Note that the comments below are based on the instructor’s opinions and experiences, and may not be the only use cases for the lifecycle method above. </p>
+  <ul>
+    <li> componentWillUnmount() - This is the place to handle any cleanup that your component may require. This includes killing event listeners, timeouts and intervals, which can lead to memory leaks. </li>
+    <li> componentDidMount() - This one is also very useful, specifically if you need access to the rendered components as soon as possible. Reasons for this include needing to attach an event listener to an element. </li>
+    <li> componentDidUpdate() - It’s a good place to manually access the DOM. Also useful for running logic based on props/state changes. Eg. If prop userId changes, fetch for data for this new userId. </li>
+    <li> componentDidCatch() - This is a new lifecycle method. Perfect for displaying a fallback UI or sending crash errors to a remote service. </li>
+    <li> shouldComponentUpdate() - Mostly used for manual performance improvements, although it should be avoided when possible. Usage of this could potentially mean that you are trying to patch a badly architectured application. </li>
+    <li> getDerivedStateFromProps() - This new lifecycle method is invoked after a component is instantiated as well as when it receives new props. It should be able to cover use cases for the deprecated componentWillReceiveProps() function. </li>
+    <li> getSnapshotBeforeUpdate() - This new lifecycle method is called right before mutations are made (before DOM is updated). This method is often unneeded, but should be able to cover use cases for the deprecated componentWillUpdate(). </li>
+  </ul>
+
+  <b> Implementing Lifecycle Example </b>
+  <p>See the Official Documentation for a good example: <a href="#"> React Component Lifecycle </a></p>
+
+<br /><hr><br />
+
+<h4 id="handlers"> Event Handlers </h4>
+  <b> React Event Handling </b>
+  <p> The same events that you can use on the DOM are also available on React elements. There are a few syntax differences: </p>
+  <ul>
+    <li> React events are named using camelCase, rather than lowercase. </li>
+    <li> With JSX you pass a function as the event handler, rather than a string. </li>
+    <li> Cannot return false on event handlers to prevent the default behaviour. The alternative is to use preventDefault(). </li>
+  </ul>
+  <b> List of available events </b>
+  <p> The list is fairly extensive. Take a quick look at the list of DOM events: <a href="#"> DOM Object Event</a>. You do not need to know them all, as many are rarely used. On the other hand, some are very extensively. Here is the minimum list of events that you should be aware of: </p>
+  <ul>
+    <li> onClick </li>
+    <li> onMouseEnter </li>
+    <li> onMouseLeave </li>
+    <li> onKeyDown </li>
+    <li> onKeyUp </li>
+    <li> onFocus </li>
+    <li> onBlur </li>
+    <li> onChange </li>
+    <li> onSubmit </li>
+  </ul>
+  <br />
+
+  <ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link" href="#"> << Lecture 1: React Introduction</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"> Lecture 3: React Router >></a>
+  </li>
+</ul>
+
+</body>
+</html>

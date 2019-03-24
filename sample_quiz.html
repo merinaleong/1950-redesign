@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Quiz 2 COMP1950 </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/proto.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- Navigation Bar-->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <a class="nav-link disabled" href="proto.html">COMP 1950</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="proto.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="lecture.html">Lectures</a></li>
+      <li class="nav-item active"><a class="nav-link" href="quiz.html">Quizzes</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Assignments</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Exams</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+   </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<br />
+<!-- Title -->
+<h2> COMP 1950 Web Development and Design </h2><br />
+
+<nav aria-label="breadcrumb" class="bg-white">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="quiz.html">Quizzes</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Quiz 2: State, Components and Handlers</li>
+  </ol>
+</nav>
+<br />
+<h4> State, Components and Handlers </h4>
+
+<p> 1. Lifecycle methods are mainly used ___________. </p>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio1">To keep track of event history</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio2">To enhance components</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio3">Freeup resources</label>
+</div>
+<br />
+
+<p> 2. _________ can be done while more than one element needs to be returned from a component. </p>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio12" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio12">Abstraction</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio22" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio22">Packing</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio32" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio32">Encapsulation</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio42" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio42">Wrapping</label>
+</div>
+<br />
+
+<p> 3. We can go for keys when there is possibility that our user could change the data. </p>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio5">Keys</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio6">ref</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio7" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio7">Both</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio8" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio8">None of Above</label>
+</div>
+<br />
+
+<p> 4. Arbitrary inputs of components are called __________. </p>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio14" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio14">Keys</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio24" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio24">Props</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio34" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio34">Elements</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio44" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio44">Ref</label>
+</div>
+<br />
+
+<p> 5. Which of the following needs to be updated to achieve dynamic UI updates?</p>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio13" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio13">State</label>
+</div>
+<div class="custom-control custom-radio">
+  <input type="radio" id="customRadio23" name="customRadio" class="custom-control-input">
+  <label class="custom-control-label" for="customRadio23">Props</label>
+</div>
+<br />
+
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link" href="#"> << Quiz 1: React Basics</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#"></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#"> Quiz 3: React Router >></a>
+  </li>
+</ul>
+
+</body>
+</html>
