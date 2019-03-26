@@ -75,4 +75,7 @@ footer span {
     margin: 0 auto;
 }
 
-
+body {
+  padding: 2%; 
+  margin: 0 auto;
+}
