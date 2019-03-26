@@ -1,18 +1,63 @@
+.navbar  {
+    background-color: #5bc0de;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    color: lightgrey;
+    font-size: 20px;
+}
+
+.navbar-nav>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.navbar-nav>li>a:hover {
+    background-color: white;
+    color: #5bc0de;
+}
+
 #sitemap {
     width: 100%;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#site_text {
+    padding: 30px;
+}
+
+hr {
+    height: 500px;
+    border-left: 0.5px solid grey;
+    position: absolute;
+    left: 100%;
+    margin-left: 5px;
+    margin-top: -30px;
+    top: 0;
+    opacity: 0.5;
+}
+
+form {
+    padding-left: 50px;
 }
 
 input[type="text"] {
     height: 100px;
-    width: 50%;
+    width: 90%;
 }
 
 input[type="email"] {
-    width: 50%;
+    width: 90%;
 }
 
-.btn {
+.btn, .btn:hover {
     font-size: 14px;
+    background-color: #5bc0de;
+    border: none;
 }
 
 footer {
