@@ -1,1 +1,33 @@
-/* Andrea's Hub Homework Styling */
+#sitemap {
+    width: 100%;
+}
+
+input[type="text"] {
+    height: 100px;
+    width: 50%;
+}
+
+input[type="email"] {
+    width: 50%;
+}
+
+.btn {
+    font-size: 14px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    background-color: #f8f9fa;
+    margin: 0 auto;
+}
+
+footer span {
+    color: grey;
+    margin: 0 auto;
+}
+
+
